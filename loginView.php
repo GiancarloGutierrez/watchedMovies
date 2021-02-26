@@ -1,6 +1,6 @@
 <?php
 
-require_once("code/sessionCheck.php");
+//require_once("code/sessionCheck.php");
 
 ?>
 <!doctype html>
@@ -13,13 +13,10 @@ require_once("code/sessionCheck.php");
     <header>
         <p>ShowSay</p>
     </header>
-<?php
-    require_once('html/navigation.php');
-?>
 
 <div class = "row">
 <?php
-    require_once('html/page/main.php');
+    require_once('html/page/login.php');
     require_once('html/aside.php'); 
 ?>
 </div>

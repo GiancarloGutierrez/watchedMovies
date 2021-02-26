@@ -1,4 +1,4 @@
 <main class ="col-7 col-m-12">
 <h1> Homepage </h1>
-<section>This is the homepage</section>
+<section><h4>This is the homepage</h4></section>
 </main>
