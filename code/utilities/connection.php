@@ -1,5 +1,4 @@
 <?php
-session_start();
 $servername = "csgiancarlo.mysql.database.azure.com";
 "AdminGiancarlo@csgiancarlo";
 $username = (isset($_SESSION["SQLUSER"]) ? $_SESSION["SQLUSER"] :$_ENV['SQLUSER']);
