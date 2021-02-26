@@ -9,6 +9,6 @@
     <meta name ="author" content="Giancarlo Alberto Gutierrez">
     <meta name ="viewport" content ="width=device-width,initial-scale=1.0">
     <link rel ="icon" type ="image/png" href = "resources/team_opt.png">
-    <link rel ="stylesheet" type="text/css" href="resources/common.css">
+    <link rel ="stylesheet" type="text/css" href="resources1/common.css">
 </head> 
 
