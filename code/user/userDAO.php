@@ -3,7 +3,7 @@ class UserDAO {
   function getUser($user){
     require_once('./utilities/connection.php');
     
-    $sql = "SELECT first_name, last_name, username, user_id FROM user WHERE user_id =" . $user->getUserId();
+    $sql = "SELECT first_name, last_name, username1, user_id FROM user WHERE user_id =" . $user->getUserId();
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -40,31 +40,41 @@ class UserDAO {
   function createUser($user){
     require_once('./utilities/connection.php');
     //prepare and bind
-    $stm = $conn->prepare(
-    $sql = "INSERT INTO cs3620_proj.user
+    $stmt = $conn->prepare(
+    "INSERT INTO cs3620.user
     (
-    `username`,
-    `password`,
-    `first_name`,
-    `last_name`)
+    username1,
+    password1,
+    first_name,
+    last_name)
     VALUES
-    (?,?,?,?);");
-
+    (?, ?, ?, ?)");
     $un= $user->getUsername();
     $pw= $user->getPassword();
     $fn= $user->getFirstName();
     $ln= $user->getLastName();
 
-    $stmt->bind_param("ssss",$un,$pw,$fw,$ln);
-    $stmt->execute();
+    $stmt->bind_param("ssss",$un,$pw,$fn,$ln);
 
-  
+    if(!$stmt->execute()){
+      $stmt->close();
+      $conn->close();
 
-    if ($conn->query($sql) === TRUE) {
-      echo "user created";
-    } else {
-      echo "Error: " . $sql . "<br>" . $conn->error;
+      session_start();
+      if($un == ""){
+        $_SESSION['errorMessage'] = "Email is Required";
+      } else if ($fn ==""){
+        $_SESSION['errorMessage'] = "First Name is Required";
+      } else if ($ln == ""){
+        $_SESSION['errorMessage'] = "Last Name is Required";
+      }
+      else{
+        $_SESSION['errorMessage'] = "A user with that email already exists";
+      }
+      
+      header("Location: ../registerView.php");
     }
+
     $stmt->close();
     $conn->close();
   }

@@ -4,16 +4,19 @@
             <li><a href ="index.php" 
                 title ="Go to Movie Watcher Home">
                 Homepage</a></li>
-            <li><a href ="./code/logout.php" 
+            <li><a href ="registerView.php" 
                 title ="Go to empty">
-                Logout</a></li>
+                Register</a></li>
             <li>
                 <div class= "dropdown">
                     <button>More &#8595; </button>
                     <div class= "dropdown-content">
-                        <a href ="" 
+                        <a href ="./code/logout.php" 
                         title ="empty">
-                        empty</a>
+                        Logout</a>
+                        <a href ="./loginView.php" 
+                        title ="empty">
+                        Login</a>
                     </div>
                 </div>
             </li>
