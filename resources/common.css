@@ -1,0 +1,274 @@
+/*
+color scheme:
+
+light Green:
+    #0AA00E // Darkest
+	#E0F0E0 // darker
+	#EEF7EE // lighter
+
+Dark Greenish Blue:
+	#1D2F2F	// darker
+	#213635	// Middle
+    #2F4C4A // lighter
+    #305050 // Lightest
+*/
+@font-face {
+    font-family: font1;
+    src: url("font1.ttf");
+}
+
+body{
+    font-family: font1;
+    font-size: 24px;
+    color: #E0F0E0;
+    background: #1D2F2F  url("backgroundOpt.jpg")  top center;
+    margin: 24px auto;
+    padding: 0px 48px;
+}
+
+a, a:link, a:visited{
+    text-decoration: underline;
+    color:#EEF7EE;
+}
+
+a:hover, nav button:hover{
+    text-decoration: none;
+    background-color: #1D2F2F;
+    color: #E0F0E0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #EEF7EE;
+}
+
+header {
+    height: 267px;
+    background: #2F4C4A;
+    border-radius: 80px;
+    margin: 12px;
+    text-align:center;
+}
+
+
+header p{
+    font-size: 80px;
+    height: 267px;
+    color: #E0F0E0;
+    text-shadow: 4px 4px 4px #0AA00E ;
+    padding: 0px 24px;
+    line-height: 300px;
+    text-align:Center;
+}
+
+
+nav ul{
+    list-style-type: none;
+    margin-bottom: 24px;
+}
+nav li, nav .dropdown-content{
+    display: inline-block;
+    width:100%
+}
+nav a, nav button{
+    display: inline-block;
+    height: 60px;
+    line-height:60px;
+    border-radius:80px;
+    width:100%;
+    background-color:  #2F4C4A;
+    margin: 12px;
+    padding: 0px;
+    text-align: center;
+    border: 0px #2F4C4A solid;
+    color:#EEF7EE;
+}
+
+
+
+nav a, nav a:link, nav a:visited{
+    text-decoration: none;
+    display: block;
+    border-radius: 80px;
+    color:#EEF7EE;
+}
+
+nav a:hover, nav button:hover{
+    border-radius: 20px;
+}
+
+nav .dropdown {
+    position: relative;
+}
+
+nav .dropdown-content{
+    position: absolute;
+    display: none; 
+}
+
+nav .dropdown:hover .dropdown-content{
+    display: block;
+}
+
+aside img {
+    max-width: 100%;
+    height: auto;
+}
+
+main section {
+border-left: 4px double #305050;
+border-bottom: 4px double #305050;
+background-color: #213635;
+box-shadow: -6px 6px 12px #305050;
+margin: 10px;
+padding: 10px;
+border-radius: 12px;
+transition: box-shadow 0.5s;
+min-height: 300px;
+}
+
+main section a, main section a:link, main section a:visited, main section a:hover, main section:active {
+    color: #E0F0E0; 
+    text-decoration: none;
+    
+}
+
+main section:hover{
+    box-shadow: -8px 8px 4px #305050, 8px 4px 4px #305050;
+}
+
+main section img{
+float: right;
+margin-left: 12px;
+}
+
+main section h2 {
+    padding-left: 8px;
+}
+
+main h1{
+    padding-left: 24px;
+    text-shadow: 4px 4px 4px #0AA00E ;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+aside {
+background-color: #213635;
+text-align: center;
+padding: 10px;
+border-radius: 12px;
+
+}
+
+aside hr{
+  width: 90%;
+  border: 5px #305050 double;
+  border-radius: 3px;
+}
+
+aside h2,h3{
+color: #E0F0E0;
+text-align: center;
+}
+
+aside a, aside a:link, aside a:visited, aside:active {
+    text-decoration: none;
+    transition: box-shadow 0.25s, text-shadow 0.25s;
+}
+
+aside a:hover {
+    text-shadow: -8px 8px 4px #305050;
+    box-shadow: -8px 8px 4px #305050;
+}
+
+aside img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+footer {
+text-align: center;
+}
+
+footer hr{
+    width: 50%;
+}
+
+footer h5{
+    margin: 4px 0px;
+}
+
+[class*="col-"]{
+    width:100%
+}
+
+/*middle layout*/
+@media only screen and (min-width: 650px){
+
+    nav li{
+        width: 150px;
+    }
+    nav a, nav button{
+        width:150px;
+    }
+
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+
+/*desktop layout*/
+@media only screen and (min-width:950px){
+
+    nav li{
+        width: 250px;
+    }
+    nav a, nav button{
+        width:250px
+    }
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+}
+
+
+* {
+box-sizing: border-box;
+}
+
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
