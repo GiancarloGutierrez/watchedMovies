@@ -124,6 +124,7 @@ padding: 10px;
 border-radius: 12px;
 transition: box-shadow 0.5s;
 min-height: 300px;
+color: #E0F0E0;
 }
 
 main section a, main section a:link, main section a:visited, main section a:hover, main section:active {

@@ -21,8 +21,8 @@ class User implements \JsonSerializable {
   function getUsername() {
     return $this->username;
   }
-  function setUsername($username){
-    $this->username = $username;
+  function setUsername($username2){
+    $this->username = $username2;
   }
   function getFirstName() {
     return $this->first_name;
@@ -36,8 +36,8 @@ class User implements \JsonSerializable {
   function setLastName($last_name){
     $this->last_name = $last_name;
   }
-  function setPassword($password){
-    $this->password = hash("sha256", trim($password));
+  function setPassword($password2){
+    $this->password = hash("sha256", trim($password2));
   }
   function getPassword(){
     return $this->password;
@@ -55,14 +55,14 @@ class User implements \JsonSerializable {
     $userDAO->createUser($this);
   }
 
-  function deleteUser($username){
+  function deleteUser($username2){
     $userDAO = new userDAO();
-    $userDAO->deleteUser($username);
+    $userDAO->deleteUser($username2);
   }
 
-  function checkLogin($username, $password){
+  function checkLogin($username2, $password2){
     $userDAO = new userDAO();
-    return $userDAO->checkLogin($username, $password);
+    return $userDAO->checkLogin($username2, $password2);
   }
 
   public function jsonSerialize(){

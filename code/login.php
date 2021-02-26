@@ -11,11 +11,11 @@
     $session = new session();
     $login_result = $session->login($_POST["username"], $_POST["password"]);
     if(!$login_result){
-        header("Location: login.html?error=true");
+        header("Location: ../loginView.php");
         exit();
     }
     else{
-        header("Location: dashboard.php");
+        header("Location: ../index.php");
         exit();
     }
 ?>  

@@ -15,5 +15,6 @@ error_reporting(E_ALL);
     <meta name ="viewport" content ="width=device-width,initial-scale=1.0">
     <link rel ="icon" type ="image/png" href = "resources/team_opt.png">
     <link rel ="stylesheet" type="text/css" href="resources1/common.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head> 
 

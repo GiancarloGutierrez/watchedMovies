@@ -6,7 +6,7 @@
     session_start();
 
     if(!isset($_SESSION["loggedIn"])){
-        header("Location: login.html");
+        header("Location: loginView.php");
         end();
     }
 ?>
