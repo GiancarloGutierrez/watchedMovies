@@ -1,24 +1,25 @@
 
 <main class ="col-7 col-m-12">
   <section>
-    <h1> Register </h1>
-  <form action="code/user_insert.php" method="POST">
+    <h1> New Show Review </h1>
+  <form action="code/show_insert.php" method="POST">
       <div class="mb-3">
-        <label for="emailhtml" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="emailhtml" aria-describedby="emailHelp" name="username">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <label for="showTitleHtml" class="form-label">Show Name</label>
+        <input type="text" class="form-control" id="showTitleHtml" name="title">
       </div>
       <div class="mb-3">
-        <label for="passwordhtml" class="form-label">Password</label>
-        <input type="password" class="form-control" id="passwordhtml" name="password">
+        <label for="ratingHtml" class="form-label">Rating(1-5)</label>
+        <select name = "rating" id = "ratingHtml" class = "form-control">
+          <option value = 1>1 star</option>
+          <option value = 2>2 star</option>
+          <option value = 3>3 star</option>
+          <option value = 4>4 star</option>
+          <option value = 5>5 star</option>
+        </select>
       </div>
       <div class="mb-3">
-        <label for="fnamehtml" class="form-label">First Name</label>
-        <input type="text" class="form-control" id="fnamehtml" name="firstName">
-      </div>
-      <div class="mb-3">
-        <label for="lnamehtml" class="form-label">Last Name</label>
-        <input type="text" class="form-control" id="lnamehtml" name="lastName">
+        <label for="descriptionHtml" class="form-label">Description</label>
+        <input type="text" class="form-control" id="descriptionHtml" name="description">
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>

@@ -1,4 +1,8 @@
+<?php
 
+require_once("code/sessionCheck.php");
+
+?>
 <!doctype html>
 <html lang ="en-us">
 
@@ -14,7 +18,7 @@
 ?>
 <div class = "row">
 <?php
-    require_once('html/page/login.php');
+    require_once('html/page/newShow.php');
     require_once('html/aside.php');
 ?>
 </div>
