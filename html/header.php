@@ -6,11 +6,11 @@ error_reporting(E_ALL);
 
 <head>
     <meta charset = "utf-8">
-    <title>Giancarlo Alberto Gutierrez Website Portfolio</title>
+    <title>ShowSay</title>
     <meta name ="description" 
-    content ="Giancarlo Alberto Gutierrez's Portfolio of websites">
+    content ="ShowSay list of watched shows">
     <meta name ="keywords" 
-    content ="Giancarlo, Gutierrez, Portfolio, Gian, Gut, Alberto">
+    content ="Shows, Movies, streaming, watch, list, blog">
     <meta name ="author" content="Giancarlo Alberto Gutierrez">
     <meta name ="viewport" content ="width=device-width,initial-scale=1.0">
     <link rel ="icon" type ="image/png" href = "resources/team_opt.png">

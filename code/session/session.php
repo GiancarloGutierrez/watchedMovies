@@ -12,6 +12,7 @@ class session {
     $loggedInUser = $user->checkLogin($username, $password);
     if($loggedInUser != 0){
       $_SESSION["loggedIn"] = true;
+      $_SESSION["userLogged"] = hash("sha256", trim($username));
       $_SESSION["user_id"] = $loggedInUser;
       return true;
     }
