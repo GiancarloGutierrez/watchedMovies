@@ -9,7 +9,7 @@ $show = new show();
 $show->setShowTitle($_POST["title"]);
 $show->setShowRating($_POST["rating"]);
 $show->setShowDescription($_POST["description"]);
-$show->setUserLog($_SESSION["userLogged"]);
+$show->setUserLog($_SESSION["user_id"]);
 $show->createShow();
 
 
