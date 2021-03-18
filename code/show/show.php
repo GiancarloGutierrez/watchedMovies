@@ -4,12 +4,19 @@ require_once('./show/showDAO.php');
 class Show implements \JsonSerializable {
   // Properties
   private $userLog;
+  private $showID;
   private $showTitle;
   private $showDescription;
   private $showRating;
 
   // Methods
   function __construct() {
+  }
+  function getShowID(){
+    return $this->showID;
+  }
+  function setShowID($show_ID){
+    $this->showID = $show_ID;
   }
   function getUserLog(){
     return $this->userLog;
@@ -41,16 +48,22 @@ class Show implements \JsonSerializable {
     $shows = $showDAO->getShows();
     return $shows;
   }
+  function getMyShows($user_id){
+    $showDAO = new ShowDAO();
+    $shows = $showDAO->getMyShows($user_id);
+    return $shows;
+  }
 
   function createShow(){
     $showDAO = new ShowDAO();
     $showDAO->createShow($this);
   }
 
-//   function deleteShow($username2){
-//     $userDAO = new userDAO();
-//     $userDAO->deleteUser($username2);
-//   }
+  function deleteShow($showID,$username2){
+    $showDAO = new ShowDAO();
+    $result = $showDAO->deleteShow($showID,$username2);
+    return $result;
+  }
 
   public function jsonSerialize(){
       $vars = get_object_vars($this);
